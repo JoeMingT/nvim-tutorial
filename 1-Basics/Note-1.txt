@@ -1,0 +1,48 @@
+Note 1: Basics of Vim
+=====================
+
+Vim has plenty of things that comes with it in order to make it possible to do most things using purely the keyboard.
+Vim starts with multiple modes. Each modes does their own things and have special things available only to them.
+The modes in Vim includes:
+1. Normal: Cannot edit anything. But allows you to use keybindings.
+2. Insert: Allows editing / typing. Have some keybindings but very limited.
+3. Command: Access to commands for NeoVim.
+4. Visual: Allows for Selection of More than one Line.
+
+
+Note 2: Entering Insert Mode
+============================
+
+There are multiple ways to enter Insert Mode. These are default keybindings from Vim.
+To Enter Insert Mode you could type:
+a: Insert starting right AFTER your cursor
+A: Insert starting at the END of the Line
+i: Insert starting AT your cursor
+I: Insert starting at the BEGINNING of the line
+o: Add a new line below and Insert starting from the new line
+O: Add a new line above and Insert starting from the new line
+
+
+Note 3: Moving in Vim
+=====================
+
+Similar to above, there are definitely multiple different ways to navigate around the Vim environment.
+First of all, using mouse DOES NOT work as you are in a terminal. Unless you have some settings or plugin installed that allows the usage of mouse.
+Furthermore, it's important to note that this is under the "Normal" mode context. In Insert mode, we will have other means to do so.
+Now, to move around Vim, we can of course use the Arrow Keys.
+However, a more efficient manner is to use the h, j, k, and l keys. 
+h: Moves left
+j: Moves down
+k: Moves up
+l: Moves right
+
+Now, you may ask, how would I navigate multiple lines at once? 
+We can do this by combining keybinds. We can press a number, followed by the direction.
+This will navigate the cursor according to the number you have typed.
+For example, '5j' will move down 5 times.
+
+There are also some special type of movements, which I will list down below:
+gg: Move to START OF FILE
+G: Move to END OF FILE
+
+

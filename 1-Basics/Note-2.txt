@@ -1,0 +1,81 @@
+Note 4: Adept Keybindings
+=========================
+
+In this section, there will be a lot of different Vim keybindings. These are more for adept people, but beginners can definitely start memorizing them.
+The keybindings are grouped into multiple different categories.
+
+1. Undo and Redo
+================
+u: Undo Action
+Ctrl+R: Redo Action
+
+NOTE: You can mix and match numbers to dictate the number of time to run the Undo or Redo command.
+For example, '3u' will run the Undo command 3 times.
+
+2. Copy, Cut, Paste, Delete
+===========================
+d: Delete the Selection and Copies it into Buffer
+dd: Delete entire line and Copies it into Buffer
+D: Delete the REST of the line (starting from cursor)
+y: Copy the Selection into Buffer
+yy / Y: Copies the Entire Line into Buffer
+c: Cut the Selection into Buffer (Won't delete the line like dd)
+cc: Cuts the Entire Line into Buffer
+C: Cut the REST of the line (starting from cursor)
+p: Paste the Selection at the End of Line / A Line Above
+P: Paste the Selection from the Beginning of Line / A Line Below
+
+NOTE: Copying or Cutting in Vim does not copy it into the System clipboard.
+NOTE: Similar to above, you can mix and match numbers with the keybind above to repeat it.
+NOTE: Cuts directly enter you into Insert Mode
+
+3. Replacing
+============
+r: Replace the selection with the next character you type
+R: Enters "Replace" Mode
+
+
+
+Note 5: Advanced Movement in Vim
+================================
+There are more ways to move in Vim. These are more precise methods of moving, providing you a better control on where you want to move.
+Again all this in "Normal" mode.
+
+w: Move to the start of the next word
+W: Move to the start of the next word (Ignoring special characters / cases)
+e: Move to the end of the next word
+E: Move to the end of the next word (Ignoring special characters / cases)
+b: Move to the start of the previous word
+B: Move to the start of the previous word (Ignoring special characters / cases)
+0: Jump to the Beginning of the Line
+$: Jump to the End of the Line
+
+NOTE: This movement can be combined with other keybindings such as Cut/Copy/Delete
+For example, 'dw' means to delete up to the next word
+Adding a number before it will repeat the command for the number stated
+
+
+
+Note 6: Advanced Cut, Copy and Delete
+=====================================
+There are more ways to control what to delete and cut and this provides us a more refined control in changing configuring things.
+There are the standard, highlight a section in Visual mode and pressing "c" or the keybind "cc" or "dd"
+However, there are more ways than just those two.
+By pressing "c", "d" or "y", followed by the values below. It will do different things:
+iw: Inner word
+aw: A word
+iW: Inner WORD
+aw: A WORD  
+is: Inner sentence
+as: A sentence
+ib: Inner block (Anything between brackets)
+ab: A block (Anything between brackets + brackets itself)
+i': Between ''
+i": Between ""
+i(: Between ()
+i{: Between {}
+
+For example, 'daw' will form 'Delete a word', which deletes the selected word
+'dw' deletes from the cursor to the next word, but if your cursor is located somewhere else, it will not delete the current word completely.
+As such, 'daw' and 'diw' is preferred if you want to delete the currently highlighted word
+'yib' will copy the entire block of text within the brackets.
